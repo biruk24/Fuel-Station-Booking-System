@@ -17,6 +17,5 @@ public class Car extends vehicle {
 
     }
 }
-public class Car {
 
-}
+
