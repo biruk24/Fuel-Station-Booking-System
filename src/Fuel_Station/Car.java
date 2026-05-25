@@ -1,10 +1,10 @@
 package Fuel_Station;
 
-public class Car extends vehicle {
+public class Car extends Vehicle {
     private String fuelType;
 
-    public car(String ownerName, String licensePlate, String fuelType) {
-        super(ownerName, licensePlate, vehicleType: "Car");
+    public Car(String ownerName, String PlateNumber, String vehicleType) {
+        super(ownerName, PlateNumber, vehicleType);
         this.fuelType = fuelType;
 
     }
@@ -13,9 +13,10 @@ public class Car extends vehicle {
     }
     @Override
     public String getInfo(){
-        return "Car | Owner: " + getOwnerName() + " | Plate: " + getLicensePlate() + " | Fuel: " + fuelType;
+        return "Car | Owner: " + getOwnerName() + " | Plate: " + getPlatenumber() + " | Fuel: " + fuelType;
 
     }
+
 }
 
 
