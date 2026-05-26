@@ -3,7 +3,7 @@ package Fuel_Station;
 public class Vehicle {
     private String ownerName;
     private String PlateNumber;
-    private String vehicleType;
+    public String vehicleType;
 
     public Vehicle(String ownerName, String PlateNumber, String vehicleType) {
         this.ownerName = ownerName;
@@ -39,7 +39,7 @@ public class Vehicle {
         }
     }
     public String getInfo(){
-        return "Vehicle | Owner: " + ownerName + " | Plate: " + PlateNumber;
+        return "Vehicle | Owner: " + ownerName + " | Plate: " + PlateNumber + "vehicletype:" + getVehicleType();
     }
 }
 

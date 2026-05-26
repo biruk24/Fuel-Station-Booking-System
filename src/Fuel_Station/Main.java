@@ -29,7 +29,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("==========================================");
-        System.out.println("        Fuel Station Booking              ");
+        System.out.println("      Fuel Station Booking              ");
         System.out.println("==========================================");
 
         boolean running = true;
@@ -37,11 +37,12 @@ public class Main {
         while (running) {
             System.out.println("--- MAIN MENU ---");
             System.out.println("1. Book for Car");
-            System.out.println("2. Book for Truck");
-            System.out.println("3. Check book");
-            System.out.println("4. Cancel book");
-            System.out.println("5. View All bookings");
-            System.out.println("6. Exit");
+            System.out.println("2. Book for Motorcycle");
+            System.out.println("3. Book for Truck");
+            System.out.println("4. Check book");
+            System.out.println("5. Cancel book");
+            System.out.println("6. View All bookings");
+            System.out.println("7. Exit");
             System.out.print("Choose: ");
 
             String choice = scanner.nextLine();
@@ -49,14 +50,16 @@ public class Main {
             if (choice.equals("1")) {
                 bookCar();
             } else if (choice.equals("2")) {
+                Motorcycle();
+            }else if (choice.equals("3")) {
                 bookTruck();
-            } else if (choice.equals("3")) {
-                checkBook();
             } else if (choice.equals("4")) {
-                cancelBook();
+                checkBook();
             } else if (choice.equals("5")) {
-                viewAll();
+                cancelBook();
             } else if (choice.equals("6")) {
+                viewAll();
+            } else if (choice.equals("7")) {
                 System.out.println("Goodbye");
                 running = false;
             } else {
@@ -65,8 +68,7 @@ public class Main {
         }
     }
 
-    static void bookCar() {
-        System.out.println("--- Book for Car  ---");
+    static void bookCar() {System.out.println("--- Book for Car  ---");
 
         System.out.print("Your Name: ");
         String name = scanner.nextLine();
@@ -84,7 +86,6 @@ public class Main {
         String time = scanner.nextLine();
 
         Vehicle vehicle = new Car(name, plate, fuel);
-
         String number;
         if (time.isEmpty()) {
             number = makeBooking(vehicle, date);
@@ -96,6 +97,92 @@ public class Main {
         System.out.println("  Your Booking Number: " + number);
         System.out.println("  Show this number at the station.");
     }
+    {System.out.println("--- Book for Car  ---");
+
+        System.out.print("Your Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Plate Number: ");
+        String plate = scanner.nextLine();
+
+        System.out.print("Fuel Type (Petrol/Diesel): ");
+        String fuel = scanner.nextLine();
+
+        System.out.print("Date: ");
+        String date = scanner.nextLine();
+
+        System.out.print("Time (or press Enter for 08:30): ");
+        String time = scanner.nextLine();
+
+        Vehicle vehicle = new Car(name, plate, fuel);
+        String number;
+        if (time.isEmpty()) {
+            number = makeBooking(vehicle, date);
+        } else {
+            number = makeBooking(vehicle, date, time);
+        }
+
+        System.out.println("Booking Confirmed!");
+        System.out.println("  Your Booking Number: " + number);
+        System.out.println("  Show this number at the station.");
+    }
+
+
+    static void Motorcycle() {System.out.println("--- Book for Motorcycle  ---");
+
+        System.out.print("Your Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Plate Number: ");
+        String plate = scanner.nextLine();
+
+        System.out.print("Date: ");
+        String date = scanner.nextLine();
+
+        System.out.print("Time (or press Enter for 08:30): ");
+        String time = scanner.nextLine();
+
+        Vehicle vehicle = new Motorcycle(name, plate);
+        String number;
+        if (time.isEmpty()) {
+            number = makeBooking(vehicle, date);
+        } else {
+            number = makeBooking(vehicle, date, time);
+        }
+
+        System.out.println("Booking Confirmed!");
+        System.out.println("  Your Booking Number: " + number);
+        System.out.println("  Show this number at the station.");
+    }
+    {System.out.println("--- Book for Motorcycle  ---");
+
+        System.out.print("Your Name: ");
+        String name = scanner.nextLine();
+
+        System.out.print("Plate Number: ");
+        String plate = scanner.nextLine();
+
+
+        System.out.print("Date: ");
+        String date = scanner.nextLine();
+
+        System.out.print("Time (or press Enter for 08:30): ");
+        String time = scanner.nextLine();
+
+        Vehicle vehicle = new Motorcycle(name, plate);
+        String number;
+        if (time.isEmpty()) {
+            number = makeBooking(vehicle, date);
+        } else {
+            number = makeBooking(vehicle, date, time);
+        }
+
+        System.out.println("Booking Confirmed!");
+        System.out.println("  Your Booking Number: " + number);
+        System.out.println("  Show this number at the station.");
+    }
+
+
 
     static void bookTruck() {
         System.out.println("--- Book for Truck  ---");
@@ -110,7 +197,6 @@ public class Main {
         String trailer = scanner.nextLine();
 
         boolean istrailer = trailer.equalsIgnoreCase("yes");
-
         System.out.print("Date: ");
         String date = scanner.nextLine();
 
@@ -157,7 +243,6 @@ public class Main {
             System.out.println("No Booking found with number: " + number);
         }
     }
-
     static void viewAll() {
         System.out.println("--- All Bookings ---");
         if (bookings.isEmpty()) {
@@ -179,3 +264,4 @@ public class Main {
         return null;
     }
 }
+
