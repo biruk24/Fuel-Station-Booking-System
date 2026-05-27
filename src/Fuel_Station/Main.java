@@ -97,35 +97,7 @@ public class Main {
         System.out.println("  Your Booking Number: " + number);
         System.out.println("  Show this number at the station.");
     }
-    {System.out.println("--- Book for Car  ---");
 
-        System.out.print("Your Name: ");
-        String name = scanner.nextLine();
-
-        System.out.print("Plate Number: ");
-        String plate = scanner.nextLine();
-
-        System.out.print("Fuel Type (Petrol/Diesel): ");
-        String fuel = scanner.nextLine();
-
-        System.out.print("Date: ");
-        String date = scanner.nextLine();
-
-        System.out.print("Time (or press Enter for 08:30): ");
-        String time = scanner.nextLine();
-
-        Vehicle vehicle = new Car(name, plate, fuel);
-        String number;
-        if (time.isEmpty()) {
-            number = makeBooking(vehicle, date);
-        } else {
-            number = makeBooking(vehicle, date, time);
-        }
-
-        System.out.println("Booking Confirmed!");
-        System.out.println("  Your Booking Number: " + number);
-        System.out.println("  Show this number at the station.");
-    }
 
 
     static void Motorcycle() {System.out.println("--- Book for Motorcycle  ---");
@@ -154,36 +126,8 @@ public class Main {
         System.out.println("  Your Booking Number: " + number);
         System.out.println("  Show this number at the station.");
     }
-    {System.out.println("--- Book for Motorcycle  ---");
 
-        System.out.print("Your Name: ");
-        String name = scanner.nextLine();
-
-        System.out.print("Plate Number: ");
-        String plate = scanner.nextLine();
-
-
-        System.out.print("Date: ");
-        String date = scanner.nextLine();
-
-        System.out.print("Time (or press Enter for 08:30): ");
-        String time = scanner.nextLine();
-
-        Vehicle vehicle = new Motorcycle(name, plate);
-        String number;
-        if (time.isEmpty()) {
-            number = makeBooking(vehicle, date);
-        } else {
-            number = makeBooking(vehicle, date, time);
-        }
-
-        System.out.println("Booking Confirmed!");
-        System.out.println("  Your Booking Number: " + number);
-        System.out.println("  Show this number at the station.");
-    }
-
-
-
+    
     static void bookTruck() {
         System.out.println("--- Book for Truck  ---");
 
