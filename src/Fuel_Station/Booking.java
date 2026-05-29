@@ -44,7 +44,7 @@ public class Booking {
     }
 
     public void printDetails() {
-        System.out.println("_____________________________________");
+        System.out.println("");
         System.out.println("Booking Number : " + bookingNumber);
         System.out.println("Status         : " + status);
         System.out.println("Date & Time    : " + date + " at " + time);
