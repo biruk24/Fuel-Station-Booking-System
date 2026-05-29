@@ -58,7 +58,7 @@ Main.java — viewAll()	Iterates bookings list; each a.printDetails() triggers t
 The comment in Main.java inside viewAll() explicitly notes this: // vehicle.getInfo() inside printDetails() calls Car or Truck's version at runtime — this is runtime polymorphism (V4.0)
 
    N.B:
-•	Default booking time for Cars is 08:30 and for Trucks is 09:00 if the user presses Enter without typing a time.
-•	Booking numbers are generated sequentially in the format FSB-XXX.
-•	The Motorcycle class follows the same pattern as Car (extends Vehicle, adds a fuel-type field, overrides getInfo()).
+*	Default booking time for Cars is 08:30 and for Trucks is 09:00 if the user presses Enter without typing a time.
+*	Booking numbers are generated sequentially in the format FSB-XXX.
+*	The Motorcycle class follows the same pattern as Car (extends Vehicle, adds a fuel-type field, overrides getInfo()).
 
