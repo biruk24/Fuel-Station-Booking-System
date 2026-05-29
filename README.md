@@ -2,10 +2,10 @@ Fuel Station Booking System
 
 MVP Overview
 The system provides a fuel station to manage vehicle service bookings through a simple text menu. A customer can:
-•	Book an appointment for a Car, Truck, or Motorcycle
-•	Receive a unique booking reference number (e.g. FSB-002)
-•	Check or cancel an existing booking by reference number
-•	View all bookings in the system
+*	Book an appointment for a Car, Truck, or Motorcycle
+*	Receive a unique booking reference number (e.g. FSB-002)
+*	Check or cancel an existing booking by reference number
+*	View all bookings in the system
 It reqires JDK 8 or higher
 
 Project Structure
