@@ -24,18 +24,18 @@ public class Main {
     }
 
     static String makeBookingTruck(Vehicle vehicle, String date) {
-        return makeBooking(vehicle, date, "08:30");
+        return makeBooking(vehicle, date, "09:00");
     }
 
     public static void main(String[] args) {
-        System.out.println("==========================================");
+        System.out.println("");
         System.out.println("      Fuel Station Booking              ");
-        System.out.println("==========================================");
+        System.out.println("");
 
         boolean running = true;
 
         while (running) {
-            System.out.println("--- MAIN MENU ---");
+            System.out.println("    MAIN MENU   ");
             System.out.println("1. Book for Car");
             System.out.println("2. Book for Motorcycle");
             System.out.println("3. Book for Truck");
