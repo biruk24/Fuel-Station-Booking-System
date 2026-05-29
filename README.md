@@ -18,7 +18,7 @@ Truck subclass (adds isTrailer flag) = Motorcycle.java
 Motorcycle subclass (similar structure to Car)
 
 OOP Concepts 
-V1.0 — Classes and Objects
+V1.0 :- Classes and Objects
 A class is a blueprint of a object
 Vehicle.java — entire file	Defines the Vehicle class with fields ownerName, PlateNumber, vehicleType
 Booking.java — entire file	Defines the Booking class with fields bookingNumber, vehicle, date, time, status
@@ -26,7 +26,7 @@ Main.java line 66	Vehicle vehicle = new Car(name, plate, fuel); — creates a Ca
 Main.java line 94	Vehicle vehicle = new Truck(name, plate, isTrailer); — creates a Truck object at runtime
 Main.java line 46	Booking bkk = new Booking(number, vehicle, date, time); — creates a Booking object
 
-V2.0 — Encapsulation
+V2.0 :- Encapsulation
 Fields are kept private; access is controlled through public getters and setters, protecting internal state.
 
 Vehicle.java lines 4–6	Fields ownerName, PlateNumber, vehicleType declared private
@@ -35,7 +35,7 @@ Vehicle.java lines 30–41	Public setters with validation: setOwnerName() and se
 Booking.java lines 3–7	All fields (bookingNumber, vehicle, date, time, status) declared private
 Booking.java — setStatus()	Validates that status can only be "Confirmed" or "Cancelled"; rejects any other value
 
-V3.0 — Inheritance
+V3.0 :- Inheritance
  A subclass (extends) inherits fields and methods from a parent class, and can add its own specific behaviour.
 
 Car.java line 3	public class Car extends Vehicle — Car inherits from Vehicle
@@ -46,7 +46,7 @@ Truck.java line 5	super(ownerName, PlateNumber, vehicleType) — same pattern fo
 Car.java line 7	Adds fuelType as a Car-specific field not present in Vehicle
 Truck.java line 4	Adds isTrailer as a Truck-specific field not present in Vehicle
 
-V4.0 — Polymorphism
+V4.0 :- Polymorphism
 The same method call and behaves differently depending on the actual object type at runtime (method overriding). The reference type is Vehicle, but the executed method belongs to the actual subclass.
 
 Vehicle.java — getInfo()	Base version returns: `"Vehicle
@@ -57,7 +57,7 @@ Booking.java — printDetails()	Calls vehicle.getInfo() on a Vehicle reference �
 Main.java — viewAll()	Iterates bookings list; each a.printDetails() triggers the right getInfo() for that vehicle type
 The comment in Main.java inside viewAll() explicitly notes this: // vehicle.getInfo() inside printDetails() calls Car or Truck's version at runtime — this is runtime polymorphism (V4.0)
 
-N.B
+N.B:
 •	Default booking time for Cars is 08:30 and for Trucks is 09:00 if the user presses Enter without typing a time.
 •	Booking numbers are generated sequentially in the format FSB-XXX.
 •	The Motorcycle class follows the same pattern as Car (extends Vehicle, adds a fuel-type field, overrides getInfo()).
