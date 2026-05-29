@@ -30,7 +30,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("");
         System.out.println("      Fuel Station Booking              ");
-        System.out.println("");
+        System.out.println(" ");
 
         boolean running = true;
 
@@ -68,7 +68,7 @@ public class Main {
         }
     }
 
-    static void bookCar() {System.out.println("--- Book for Car  ---");
+    static void bookCar() {System.out.println("    Book for Car     ");
 
         System.out.print("Your Name: ");
         String name = scanner.nextLine();
@@ -100,7 +100,7 @@ public class Main {
 
 
 
-    static void Motorcycle() {System.out.println("--- Book for Motorcycle  ---");
+    static void Motorcycle() {System.out.println("    Book for Motorcycle     ");
 
         System.out.print("Your Name: ");
         String name = scanner.nextLine();
@@ -129,7 +129,7 @@ public class Main {
 
     
     static void bookTruck() {
-        System.out.println("--- Book for Truck  ---");
+        System.out.println("    Book for Truck     ");
 
         System.out.print("Your Name: ");
         String name = scanner.nextLine();
@@ -162,7 +162,7 @@ public class Main {
     }
 
     static void checkBook() {
-        System.out.println("--- Check Appointment ---");
+        System.out.println("    Check Appointment    ");
         System.out.print("Enter Booking Number (e.g. FSB-1): ");
         String number = scanner.nextLine();
 
@@ -175,7 +175,7 @@ public class Main {
     }
 
     static void cancelBook() {
-        System.out.println("--- Cancel Booking ---");
+        System.out.println("    Cancel Booking    ");
         System.out.print("Enter Booking Number to cancel: ");
         String number = scanner.nextLine();
 
@@ -188,7 +188,7 @@ public class Main {
         }
     }
     static void viewAll() {
-        System.out.println("--- All Bookings ---");
+        System.out.println("    All Bookings    ");
         if (bookings.isEmpty()) {
             System.out.println("No bookings yet.");
             return;
