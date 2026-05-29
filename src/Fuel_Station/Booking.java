@@ -49,6 +49,6 @@ public class Booking {
         System.out.println("Status         : " + status);
         System.out.println("Date & Time    : " + date + " at " + time);
         System.out.println("Vehicle Info   : " + vehicle.getInfo());
-        System.out.println("_____________________________________");
+        System.out.println("");
     }
 }
