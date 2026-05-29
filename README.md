@@ -14,7 +14,7 @@ Entry point and menu logic = Booking.java
 Booking entity (number, vehicle, date, time, status) = Vehicle.java        
 Base class for all vehicles = Car.java           
 Car subclass (adds fuelType) = Truck.java         
-Truck subclass (adds isTrailer flag)└── Motorcycle.java    
+Truck subclass (adds isTrailer flag) = Motorcycle.java    
 Motorcycle subclass (similar structure to Car)
 
 OOP Concepts 
