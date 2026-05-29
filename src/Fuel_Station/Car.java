@@ -3,7 +3,7 @@ package Fuel_Station;
 public class Car extends Vehicle {
     private String fuelType;
 
-    public Car(String ownerName, String PlateNumber, String vehicleType) {
+    public Car(String ownerName, String PlateNumber, String vehicleType, String fuelType) {
         super(ownerName, PlateNumber, vehicleType);
         this.fuelType = fuelType;
 

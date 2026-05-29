@@ -1,0 +1,54 @@
+name: PR Review Pipeline
+
+on:
+  pull_request:
+    branches: [ upload, main ]
+  push:
+    branches: [ upload, main ]
+
+jobs:
+  build-and-review:
+    name: Build, Test & Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Compile source code
+        run: javac -d out src/Fuel_Station/*.java
+
+
+      - name: Run JUnit tests
+        run: |
+          javac -cp out:lib/junit-platform-console-standalone.jar \
+            -d out test/Fuel_Station/*.java
+          java -jar lib/junit-platform-console-standalone.jar \
+            --class-path out \
+            --scan-class-path
+
+      - name: Run Checkstyle (code quality)
+        uses: dbelyaev/action-checkstyle@v1.12.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          checkstyle_config: checkstyle.xml
+          fail_on_error: true
+
+
+      - name: Post success summary
+        if: success()
+        run: |
+          
+          echo " All checks passed!"
+          echo " - Compilation: OK"
+          echo " - Tests:        OK"
+          echo " - Code quality: OK"
+          
+ 

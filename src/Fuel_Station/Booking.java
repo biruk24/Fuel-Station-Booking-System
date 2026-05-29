@@ -47,7 +47,6 @@ public class Booking {
         System.out.println("_____________________________________");
         System.out.println("Booking Number : " + bookingNumber);
         System.out.println("Status         : " + status);
-        // FIX 3: Added spaces around "at" and after the colon for readable output.
         System.out.println("Date & Time    : " + date + " at " + time);
         System.out.println("Vehicle Info   : " + vehicle.getInfo());
         System.out.println("_____________________________________");

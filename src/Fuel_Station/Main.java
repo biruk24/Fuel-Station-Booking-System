@@ -85,7 +85,7 @@ public class Main {
         System.out.print("Time (or press Enter for 08:30): ");
         String time = scanner.nextLine();
 
-        Vehicle vehicle = new Car(name, plate, fuel);
+        Vehicle vehicle = new Car(name, plate,"car", fuel);
         String number;
         if (time.isEmpty()) {
             number = makeBooking(vehicle, date);
